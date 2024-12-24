@@ -1,0 +1,115 @@
+/* features.css */
+.features-container {
+  padding: 2rem;
+  background-color: #f4f4f9; /* Light background for light mode */
+  color: #333; /* Dark text for light mode */
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.features-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #4a90e2; /* Blue accent for title */
+}
+
+.features-description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.features-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.feature-item {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.feature-item h2 {
+  font-size: 1.5rem;
+  color: #4a90e2; /* Blue accent for headings */
+  margin-bottom: 0.8rem;
+}
+
+.feature-item p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Dark Mode Styles */
+.dark-mode .features-container {
+  background-color: #2c2c2c;  /* Dark background */
+  color: #fff;  /* White text */
+}
+
+.dark-mode .features-container h1 {
+  color: #4a90e2; /* Blue title remains unchanged */
+}
+
+.dark-mode .features-description {
+  color: #ccc; /* Light gray text for descriptions */
+}
+
+.dark-mode .feature-item {
+  background-color: #3c3c3c;  /* Darker card background */
+  border: 1px solid #444;  /* Darker border */
+}
+
+.dark-mode .feature-item h2 {
+  color: #4a90e2; /* Keep blue accent for headings */
+}
+
+.dark-mode .feature-item p {
+  color: #ddd; /* Lighter text for paragraphs in dark mode */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .features-list {
+    grid-template-columns: 1fr;
+  }
+
+  .features-container h1 {
+    font-size: 2rem;
+  }
+
+  .feature-item h2 {
+    font-size: 1.3rem;
+  }
+
+  .feature-item p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .features-container h1 {
+    font-size: 1.6rem;
+  }
+
+  .feature-item h2 {
+    font-size: 1.2rem;
+  }
+
+  .feature-item p {
+    font-size: 0.9rem;
+  }
+}
+

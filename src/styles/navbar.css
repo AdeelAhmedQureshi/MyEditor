@@ -1,0 +1,144 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Reduced padding for a slimmer height */
+  background-color: #4a90e2; /* Light blue */
+  color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  z-index: 1000;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Logo Styling */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  display: flex;
+  gap: 5px; /* Slight gap between "My" and "Editor" */
+}
+
+.logo-my {
+  color: white;
+}
+
+.logo-editor {
+  color: #ffd700; /* Gold for "Editor" */
+}
+
+/* Nav Links */
+.navlist {
+  list-style: none;
+  display: flex; /* Horizontal layout */
+  gap: 20px; /* Space between items */
+}
+
+.navlist li a {
+  text-decoration: none;
+  color: white; /* White text for links */
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 5px 10px; /* Add padding for clickable area */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 4px;
+}
+
+.navlist li a:hover {
+  background-color: #6db3f2; /* Lighter blue on hover */
+  color: #fff;
+}
+
+/* Dark Mode */
+.navbar.dark-mode {
+  background-color: #333;
+}
+
+.navbar.dark-mode .logo-my {
+  color: #fff;
+}
+
+.navbar.dark-mode .logo-editor {
+  color: #4a90e2; /* Blue for dark mode */
+}
+
+.navbar.dark-mode .navlist li a:hover {
+  background-color: #555; /* Darker hover effect */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack logo and navlist vertically */
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .navlist {
+    flex-direction: column; /* Vertical layout for links */
+    width: 100%;
+    gap: 10px; /* Less space between items */
+    align-items: flex-start;
+    padding-left: 20px;
+  }
+}
+
+/* Ensure logo shrinks and nav links adjust on smaller screens */
+@media (max-width: 400px) {
+  .logo {
+    font-size: 1.5rem; /* Smaller logo */
+  }
+
+  .navlist {
+    font-size: 1.2rem; /* Adjust nav link font size */
+    gap: 10px;
+  }
+
+  .navbar {
+    padding: 8px 15px; /* Shrink navbar height */
+  }
+}
+
+
+/* Adjust editor layout for smaller screens */
+@media (max-width: 768px) {
+  .content-editable {
+    max-width: 95%; /* Allow more width space for editor */
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-top: 1rem; /* Add spacing from editor */
+    padding: 0.5rem;
+  }
+
+  .editor {
+    flex-direction: column; /* Stack content vertically */
+  }
+}
+
+/* For very small screens (<= 400px) */
+@media (max-width: 400px) {
+  .content-editable {
+    max-width: 95%; /* Max width adjustment for mobile */
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 1rem;
+  }
+}
+
