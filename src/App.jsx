@@ -1,7 +1,5 @@
 /* 
 Author: Adeel Ahmed Qureshi
-CMS: 023-22-0141
-Class: Bscs(v)-D
 Date: 12/12/2024
 Project Intro: Text Editor that help you out to analyse your text.
 */
